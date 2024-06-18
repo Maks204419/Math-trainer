@@ -94,7 +94,7 @@ function generateAreaProblem(level) {
       side2 = Math.floor(Math.random() * 10) + 1;
   }
 
-  const question = `Calculate the area of a rectangle with sides ${side1} and ${side2}`;
+  const question = `Сосчитай площадь прямоугольника со сторонами ${side1} и ${side2}`;
   const answer = side1 * side2;
   return { question, answer };
 }
@@ -119,7 +119,7 @@ function generatePerimeterProblem(level) {
       side2 = Math.floor(Math.random() * 10) + 1;
   }
 
-  const question = `Calculate the perimeter of a rectangle with sides ${side1} and ${side2}`;
+  const question = `Сосчитай периметр прямоугольника со сторонами ${side1} и ${side2}`;
   const answer = 2 * (side1 + side2);
   return { question, answer };
 }
@@ -144,7 +144,7 @@ function generateComparisonProblem(level) {
       num2 = Math.floor(Math.random() * 10) + 1;
   }
 
-  const question = `Which number is greater: ${num1} or ${num2}?`;
+  const question = `Какое из чисел больше: ${num1} или ${num2}?`;
   const answer = num1 > num2 ? num1 : num2;
   return { question, answer };
 }
