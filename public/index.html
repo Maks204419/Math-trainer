@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Тренажер по математике</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="text-center">Тренажер по математике</h1>
+  
+    <div id="auth-container" class="card mt-4">
+      <div class="card-body">
+        <h2 class="card-title">Регистрация</h2>
+        <input type="text" id="register-username" class="form-control" placeholder="Имя пользователя">
+        <input type="password" id="register-password" class="form-control mt-2" placeholder="Пароль">
+        <button class="btn btn-primary btn-block mt-2" onclick="register()">Зарегистрироваться</button>
+    
+        <h2 class="card-title mt-4">Вход</h2>
+        <input type="text" id="login-username" class="form-control" placeholder="Имя пользователя">
+        <input type="password" id="login-password" class="form-control mt-2" placeholder="Пароль">
+        <button class="btn btn-primary btn-block mt-2" onclick="login()">Войти</button>
+      </div>
+    </div>
+  
+    <div id="main-container" class="card mt-4">
+      <div class="card-body">
+        <h2>Добро пожаловать, <span id="username-display"></span>!</h2>
+        <p>Ваш счет: <span id="score-display">0</span></p>
+        
+        <div>
+          <h3>Выберите сложность:</h3>
+          <div>
+            <input type="radio" id="easy" name="difficulty" value="easy" checked>
+            <label for="easy">Легко</label>
+            <input type="radio" id="medium" name="difficulty" value="medium">
+            <label for="medium">Средне</label>
+            <input type="radio" id="hard" name="difficulty" value="hard">
+            <label for="hard">Трудно</label>
+          </div>
+        </div>
+        
+        <div>
+          <h3>Выберите тип задачи:</h3>
+          <div>
+            <input type="radio" id="arithmetic" name="problem-type" value="arithmetic" checked>
+            <label for="arithmetic">Арифметика</label>
+            <input type="radio" id="area" name="problem-type" value="area">
+            <label for="area">Площадь</label>
+            <input type="radio" id="perimeter" name="problem-type" value="perimeter">
+            <label for="perimeter">Периметр</label>
+            <input type="radio" id="comparison" name="problem-type" value="comparison">
+            <label for="comparison">Сравнение</label>
+          </div>
+        </div>
+
+        <div id="problem-container" class="mt-4"></div>
+        <button class="btn btn-primary" onclick="loadRandomProblem()">Загрузить задачу</button>
+        <button class="btn btn-danger mt-2" onclick="logout()">Выйти</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
