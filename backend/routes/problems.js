@@ -171,7 +171,7 @@ router.post('/check', (req, res) => {
       }
       break;
     case 'area':
-      const areaMatch = question.match(/sides (\d+) and (\d+)/);
+      const areaMatch = question.match(/сторонами (\d+) и (\d+)/);
       if (areaMatch) {
         const [_, side1, side2] = areaMatch.map(Number);
         correctAnswer = side1 * side2;
@@ -180,7 +180,7 @@ router.post('/check', (req, res) => {
       }
       break;
     case 'perimeter':
-      const perimeterMatch = question.match(/sides (\d+) and (\d+)/);
+      const perimeterMatch = question.match(/сторонами (\d+) и (\d+)/);
       if (perimeterMatch) {
         const [_, side1, side2] = perimeterMatch.map(Number);
         correctAnswer = 2 * (side1 + side2);
